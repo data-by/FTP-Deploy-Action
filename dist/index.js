@@ -1468,7 +1468,7 @@ class HttpClient {
             socket = sock;
         });
         // If we ever get disconnected, we want the socket to timeout eventually
-        req.setTimeout(this._socketTimeout || 3 * 60000, () => {
+        req.setTimeout(this._socketTimeout || 30 * 60000, () => {
             if (socket) {
                 socket.end();
             }
